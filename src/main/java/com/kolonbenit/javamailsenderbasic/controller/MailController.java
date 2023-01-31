@@ -3,8 +3,6 @@ package com.kolonbenit.javamailsenderbasic.controller;
 import com.kolonbenit.javamailsenderbasic.dto.MailDto;
 import com.kolonbenit.javamailsenderbasic.service.MailService;
 import lombok.RequiredArgsConstructor;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,6 +19,6 @@ public class MailController {
 
     @PostMapping("/mail")
     public void sendMail(MailDto mailDto) {
-        mailService.sendMail(mailDto);
+        mailService.sendMimeMail(mailDto);
     }
 }
